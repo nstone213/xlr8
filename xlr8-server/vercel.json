@@ -1,12 +1,16 @@
 {
-    "build": {
-      "commands": [
-        "python3 -m venv venv",
-        "source venv/bin/activate",
-        "pip install -r requirements.txt",
-        "cd xlr8-server",
-        "python3 run.py"
-      ]
-    }
+    "version": 2,
+    "builds": [
+      {
+        "src": "xlr8-server/run.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "xlr8-server/run.py"
+      }
+    ]
   }
   
