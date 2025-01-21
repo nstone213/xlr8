@@ -58,4 +58,4 @@ if __name__ == '__main__':
         db.create_all()
 
     print("Flask app starting...")
-    socketio.run(app, host="0.0.0.0", port=5000, debug=True)
+    socketio.run(app, host="0.0.0.0", port=5003, debug=True)
